@@ -1,0 +1,8 @@
+#1
+
+ligne 134   const query = `SELECT * FROM users WHERE name = $1`; // vulnérable SQLi
+ligne 135   const values = [userName];
+
+La db étant en postgre, on la prépare avec `$1`, si c'est du mysql c'est avec `?`
+
+
